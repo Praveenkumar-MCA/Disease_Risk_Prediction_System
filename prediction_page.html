@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Predict Disease{% endblock %}
+
+{% block content %}
+<div class="card mx-auto" style="max-width: 500px;">
+    <div class="card-body">
+        <h3 class="text-center">Disease Prediction</h3>
+        <form method="POST">
+            <div class="mb-3"><input type="text" name="blood_sugar" class="form-control" placeholder="Blood Sugar Level" required></div>
+            <div class="mb-3"><input type="text" name="cholesterol" class="form-control" placeholder="Cholesterol Level" required></div>
+            <div class="mb-3"><input type="text" name="liver_enzyme" class="form-control" placeholder="Liver Enzyme Level" required></div>
+            <div class="mb-3"><input type="text" name="kidney_function" class="form-control" placeholder="Kidney Function Level" required></div>
+            <div class="mb-3"><input type="text" name="thyroid_level" class="form-control" placeholder="Thyroid Level" required></div>
+            <button type="submit" class="btn btn-success w-100">Predict</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

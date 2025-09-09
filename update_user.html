@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Update Profile{% endblock %}
+
+{% block content %}
+<div class="card mx-auto" style="max-width: 500px;">
+    <div class="card-body">
+        <h3 class="text-center">Update Profile</h3>
+        <form method="POST">
+            <div class="mb-3"><input type="text" name="name" class="form-control" value="{{ user.name }}" required></div>
+            <div class="mb-3"><input type="number" name="age" class="form-control" value="{{ user.age }}" required></div>
+            <div class="mb-3"><input type="text" name="sex" class="form-control" value="{{ user.sex }}" required></div>
+            <div class="mb-3"><input type="text" name="father_name" class="form-control" value="{{ user.father_name }}" required></div>
+            <div class="mb-3"><input type="text" name="mother_name" class="form-control" value="{{ user.mother_name }}" required></div>
+            <div class="mb-3"><input type="text" name="address" class="form-control" value="{{ user.address }}" required></div>
+            <div class="mb-3"><input type="text" name="contact" class="form-control" value="{{ user.contact }}" required></div>
+            <button type="submit" class="btn btn-warning w-100">Update Profile</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

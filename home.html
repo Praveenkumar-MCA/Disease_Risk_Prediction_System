@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="text-center mt-5">
+    <h1 class="text-success fw-bold">Welcome to the Disease Risk Prediction System</h1>
+    <p class="text-info">Predict diseases like <strong>Kidney-Liver-Heart-Diabetes-Thyroid</strong> based on your blood test reports.</p>
+    <a href="{{ url_for('login') }}" class="btn btn-warning text-dark fw-bold">Get Started</a>
+</div>
+{% endblock %}

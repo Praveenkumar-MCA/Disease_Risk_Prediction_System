@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center">Welcome, {{ session['username'] }}</h2>
+    <a href="{{ url_for('home') }}" class="btn btn-secondary mb-3">🏠 Back to Home</a>  
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Profile</h5>
+                    <h2 class="text-center">Welcome, {{ session.get('username', 'Guest') }}</h2>
+                    <p>Debug: session = {{ session }}</p>
+
+                    <p class="card-text">View and update your profile details.</p>
+                    <a href="{{ url_for('update_user') }}" class="btn btn-primary">Update Profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Predict Disease</h5>
+                    <p class="card-text">Enter your test values to check for any diseases.</p>
+                    <a href="{{ url_for('predict') }}" class="btn btn-success">Predict Now</a>
+                    <p>Debug: If you see this message, the template is loading correctly.</p>
+                    <a href="{{ url_for('prediction_history') }}" class="btn btn-primary">📜 View Prediction History</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
